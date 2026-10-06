@@ -1,0 +1,18 @@
+[
+  {"id":"hl2_headcrab","displayName":"Headcrab","behavior":"leap_melee","healthMult":0.5,"speedMult":1.3,"damage":8,"attackCooldown":1.5,"sound":"stand_in_screech","model":"stand_in_crab","verified":false},
+  {"id":"hl2_zombie","displayName":"Zombie","behavior":"slow_melee","healthMult":1.5,"speedMult":0.7,"damage":20,"attackCooldown":2.0,"sound":"stand_in_groan","model":"stand_in_zombie","verified":false},
+  {"id":"hl2_combine","displayName":"Combine Soldier","behavior":"ranged_burst","healthMult":1.0,"speedMult":1.0,"damage":10,"attackCooldown":0.8,"projectile":"stand_in_pulse","sound":"stand_in_radio","model":"stand_in_soldier","verified":false}
+]
+[
+  {"replaces":"Filth","with":"hl2_headcrab","chance":1.0,"verified":false},
+  {"replaces":"Stray","with":"hl2_zombie","chance":1.0,"verified":false},
+  {"replaces":"Soldier","with":"hl2_combine","chance":1.0,"verified":false}
+]
+[
+  {"key":"EnableHL2Enemies","type":"bool","default":true,"configFile":"BepInEx/config/hl2kill.cfg","menuLabel":"Half-Life 2 enemies","verified":false}
+]
+[
+  {"id":"enemy_spawn","target":"VERIFY","type":"harmony_postfix","purpose":"replace spawned enemy by swap_map","verified":false},
+  {"id":"options_menu","target":"VERIFY","type":"harmony_postfix","purpose":"add the on/off toggle","verified":false},
+  {"id":"enemy_death","target":"VERIFY","type":"harmony_postfix","purpose":"play stand-in death sound","verified":false}
+]
